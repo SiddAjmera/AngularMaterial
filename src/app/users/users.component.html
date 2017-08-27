@@ -1,0 +1,17 @@
+<md-card class="example-card" *ngFor="let user of users; let i = index">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>{{ user.name }}</md-card-title>
+    <md-card-subtitle>{{ user.username }}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="https://www.lorempixel.com/448/358/people/{{i}}">
+  <md-card-content>
+    <p>
+      {{user.name}} lives on {{user.address.street}}, {{user.address.suite}} in {{user.address.city}}. {{user.name}} works for {{user.company.name}} which is a {{user.company.catchPhrase}} that {{user.company.bs}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
